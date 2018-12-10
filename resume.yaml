@@ -1,0 +1,68 @@
+name: Sunny Chow
+experience:
+  - company: Apple
+    date: 2012 - current
+    title: CoreMotion Senior Manager
+    description:
+      - Led the Activity Team on CoreMotion
+      -
+         - Mentored and guided developer/scientists, drove schedules, and worked cross functionally to ship the following features:
+         - Activity Classification / Step Counter on all variants of the Apple Motion Coprocessor
+         - Find My Car, Do Not Disturb While Driving, Workout Start/Stop Alerts, Sensor data collection for Fall Detection.
+         - Architected a system for team to build out Move/Exercise rings and Workouts experience for the Apple Watch.
+         - Made system deterministic for simulation, abstracted unreliable and latent inputs for ease of use, and allowed the team to work in parallel in shipping the features above.
+         - Designed/developed a solution to collect all day sensor data (CMSensorRecorder) in a power efficient manner and was a foundation to building:
+         -
+            - Sensor Data Collection for the Fall detection
+            - Key troubleshooting and low friction data collection tool for collecting data for issue triaging.
+            - Encouraged a culture to find ways to build ever more robust software.  Participated extensively in book clubs, code reviews, and design reviews.
+        - Cultivated lasting internal and cross functional partnerships by being transparent and respectful in the pursuit of mutually beneficial goals.
+
+  - company: Pacific Biosciences
+    date: 2010-2012
+    title: Software Engineer
+    description:
+      - Worked closely with manufacturing and systems verification groups to troubleshoot and increase the reliability of the instrument.
+      - Responsible for robot control and workflow software for a genome sequencing instrument.
+      - Developed, characterized, and improved machine vision algorithms to coordinate robot motions to objects on a work deck
+      - Designed and developed an object oriented interface to create an intuitive instruction set to simplify programming of protocols.
+
+  - company: FreightScan Cargo
+    date: 2007-2009
+    title: Senior Software Engineer
+    description:
+
+  - company: Alibaba
+    date: 2007-2008
+    title: Product Developer
+    description:
+
+  - company: University of California San Diego, National Center for Microscopy and Imaging Research
+    date: 2001-2006
+    title: Associate Development Engineer
+    description:
+
+publications:
+  - Journal of Microscopy, Automated Microscopy System for Mosaic Acquisition and Processing
+
+technical skills:
+  - C++
+  - Objective C
+  - Python
+  - iOS
+  - Git
+  - Linux
+
+education:
+    - institution: University of California, San Diego
+      date: 2002 - 2004
+      description: MS, Computer Science, Concentration in Computer Graphics And Vision
+
+    - institution: University of California, San Diego
+      date: 1997 - 2001
+      description: BS, Computer Science
+
+    - institution: Tsinghua University
+      date: 2006-2007
+      description: Chinese Language Studies
+...
