@@ -1,25 +1,26 @@
 name: Sunny Chow
 experience:
  - company: Apple
-   date: 2012 - current
+   date:
+     from: 2012
+     to: current
    title: CoreMotion Senior Manager
    description:
    - Led the Activity Team on CoreMotion
    -
     - Mentored and guided developer/scientists, drove schedules, and worked cross functionally to ship the following features
     - Activity Classification / Step Counter on all variants of the Apple Motion Coprocessor
-    - Find My Car, Do Not Disturb While Driving, Workout Start/Stop Alerts, Sensor data collection for Fall Detection.
-   - Architected a system to build out Move/Exercise rings and Workouts experience for the Apple Watch.
+    - Find My Car, Do Not Disturb While Driving, Workout Start/Stop Alerts, Sensor data collection for Health User Studies
+   - Architected a system that powered the Move/Exercise rings and Workouts experience for the Apple Watch.
    - Made system deterministic for simulation, abstracted unreliable and latent inputs for ease of use, and allowed the team to work in parallel in shipping the feature
-   - Designed/developed a solution to collect all day sensor data (CMSensorRecorder) in a power efficient manner and was a foundation to building to the following
-   -
-    - Sensor Data Collection for the Fall detection
-    - Key troubleshooting and low friction data collection tool for collecting data for issue triaging.
+   - Designed/developed a solution to collect all day sensor data (CMSensorRecorder) in a power efficient manner and was a foundation to building out large scale user studies.
    - Encouraged a culture to find ways to build ever more robust software.  Participated extensively in book clubs, code reviews, and design reviews.
    - Cultivated lasting internal and cross functional partnerships by being transparent and respectful in the pursuit of mutually beneficial goals.
 
  - company: Pacific Biosciences
-   date: 2010-2012
+   date:
+    from: 2010
+    to: 2012
    title: Software Engineer
    description:
    - Responsible for the work deck and machine vision related software for a genetic sequencing instrument.
@@ -29,33 +30,40 @@ experience:
    - Simplified and refactored the interlock publisher-subscriber system for correct behavior.  Improved software response times by eliminating unnecessary locking that created an artificial dependency between status updates and the behaviors the status update invoked.   Fixed state consensus checks across multiple boards and compensated for the non-deterministic reporting by triggering the check only after a status change followed by a period of inactivity instead of polling.
    - Worked closely with hardware to identify the source of firewire bus resets, a leading cause of failures in the system.  Developed a C++ application to test when the bus timeouts occurred. This led to the discovery that image acquisition and bus resets were not correlated and thus the eventual source of the timeouts.
 
- - company:
-   date: 2010
+ - company: Direct Electron
+   date:
+     from: 2010
+     to: 2010
    title: Independent Contractor
    description:
    - Developed the Direct Electron microscope client in C++, and Visual Studio.  Used Boost ASIO for TCP/IP communication to the server and Google Protocol Buffers for data serialization.  Ported client to *nix platforms using GNU Autotools.
    - Developed the LiveFFT plugin for ImageJ in Java to dynamically update an image's FFT transform as it is updated (during image acquisition).
-   - Improved a rectangle detection algorithm in C++ and OpenCV using the Hough transform.  Implemented an algorithm to find sets of parallel lines using hash maps for efficient line grouping based on angles
 
  - company: FreightScan Cargo
-   date: 2007-2009
+   date:
+     from: 2007
+     to: 2009
    title: Senior Software Engineer
    description:
    - Responsible for the machine vision algorithm development for a cargo dimensioning system using C++.   
-   - Developed an interactive 3D point cloud viewer to visualize scans and inspect data points generated from a time of flight scanner (similar to the Kinect) using Microsoft XNA.
+   - Developed an interactive 3D point cloud viewer to visualize scans and inspect data points generated from a time of flight scanner using Microsoft XNA.
    - Improved measurement results by developing an algorithm to identify and eliminate false data points created in the shadows of objects.  Shadow detection was implemented by finding sets of points that formed a line collinear with the incident ray from the camera.
    - Implemented a motion detection algorithm to trigger automatic system scans using OpenCV and DirectShow using image differences.
    - Designed and developed an observer pattern based, client-server communication layer using .NET Remoting.
 
  - company: Alibaba
-   date: 2007-2008
+   date:
+     from: 2007
+     to: 2009
    title: Product Developer
    description:
    - Coordinated regional US and Hong Kong marketing operations from China headquarters.
    - Jointly developed overseas online marketing programs and bridged language communications.
 
  - company: University of California San Diego, National Center for Microscopy and Imaging Research
-   date: 2001-2006
+   date:
+     from: 2001
+     to: 2006
    title: Associate Development Engineer
    description:
    - Enabled the visualization of neurodegenerative disorders by creating an automated system to acquire and assemble gigapixel maps of mouse brains.
