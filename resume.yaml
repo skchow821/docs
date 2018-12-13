@@ -23,12 +23,11 @@ experience:
     to: 2012
    title: Software Engineer
    description:
-   - Responsible for the work deck and machine vision related software for a genetic sequencing instrument.
-   - Developed application software using C# and NUnit, using both Visual Studio and Linux (as an IDE).  Debugged embedded Linux applications written in C++.  Developed manufacturing, field service, and testing scripts using Python.
+   - Responsible for the robot and machine vision software for a genetic sequencing instrument.
+   - Developed application software using C# and NUnit, using both Visual Studio and Linux.  Debugged embedded Linux applications written in C++.  Developed manufacturing, field service, and testing scripts using Python.
    - Eliminated a major source of chip pick up failures by identifying and fixing a critical machine vision transformation that incorrectly calculated the pose of the stage from which our robot was attempting to pick up a chip.
-   - Improved robustness to imaging variations for a fiducial detection and positioning algorithm by applying additional constraints to minimally select and enhance edges using morphology together with the Laplacian filter.
-   - Simplified and refactored the interlock publisher-subscriber system for correct behavior.  Improved software response times by eliminating unnecessary locking that created an artificial dependency between status updates and the behaviors the status update invoked.   Fixed state consensus checks across multiple boards and compensated for the non-deterministic reporting by triggering the check only after a status change followed by a period of inactivity instead of polling.
-   - Worked closely with hardware to identify the source of firewire bus resets, a leading cause of failures in the system.  Developed a C++ application to test when the bus timeouts occurred. This led to the discovery that image acquisition and bus resets were not correlated and thus the eventual source of the timeouts.
+   - Improved robustness to imaging variations for a fiducial detection and positioning algorithm by applying additional constraints to minimally select and enhance edges using morphology together with sharpening filters.
+   - Simplified and refactored the interlock publisher-subscriber system for correct behavior.  Improved software response times by reducing unnecessary synchroniztion between status updates and the status update responses.
 
  - company: Direct Electron
    date:
@@ -36,7 +35,7 @@ experience:
      to: 2010
    title: Independent Contractor
    description:
-   - Developed the Direct Electron microscope client in C++, and Visual Studio.  Used Boost ASIO for TCP/IP communication to the server and Google Protocol Buffers for data serialization.  Ported client to *nix platforms using GNU Autotools.
+   - Developed the Direct Electron microscope client in C++, and Visual Studio.  Used Boost ASIO for TCP/IP communication to the server and Google Protocol Buffers for data serialization.  Ported client to Linix platforms using GNU Autotools.
    - Developed the LiveFFT plugin for ImageJ in Java to dynamically update an image's FFT transform as it is updated (during image acquisition).
 
  - company: FreightScan Cargo
@@ -45,11 +44,11 @@ experience:
      to: 2009
    title: Senior Software Engineer
    description:
-   - Responsible for the machine vision algorithm development for a cargo dimensioning system using C++.   
+   - Responsible for the machine vision algorithm development for a cargo dimensioning system using C++.
    - Developed an interactive 3D point cloud viewer to visualize scans and inspect data points generated from a time of flight scanner using Microsoft XNA.
    - Improved measurement results by developing an algorithm to identify and eliminate false data points created in the shadows of objects.  Shadow detection was implemented by finding sets of points that formed a line collinear with the incident ray from the camera.
    - Implemented a motion detection algorithm to trigger automatic system scans using OpenCV and DirectShow using image differences.
-   - Designed and developed an observer pattern based, client-server communication layer using .NET Remoting.
+   - Designed  an observer pattern based, client-server communication layer using .NET Remoting.
 
  - company: Alibaba
    date:
@@ -66,7 +65,7 @@ experience:
      to: 2006
    title: Associate Development Engineer
    description:
-   - Enabled the visualization of neurodegenerative disorders by creating an automated system to acquire and assemble gigapixel maps of mouse brains.
+   - Enabled the visualization of neurodegenerative disorders by creating an automated system to acquire and assemble gigapixel images of mouse brains.
    - Utilized the combination of Microsoft Visual C++, MFC and COM to synchronize stepper motor movements with image acquisition.
    - Engineered a non-uniform illumination correction and image alignment solution in a memory efficient manner with Eclipse and Java Advanced Imaging libraries.
    - Collaborated with Olympus engineers to develop commercial automated mosaic systems.
