@@ -57,12 +57,12 @@ experience:
    - Coordinated regional US and Hong Kong marketing operations from China headquarters.
    - Jointly developed overseas online marketing programs and bridged language communications.
 
- - company: University of California San Diego
-   location: NCMIR - San Diego, CA
+ - company: University of California San Diego, NCMIR
+   location: San Diego, CA
    date:
      from: 2001
      to: 2006
-   title: Assoc Dev Engineer
+   title: Associate Development Engineer
    description:
    - Enabled the visualization of neurodegenerative disorders by integrating a motorized microscope platform and image acquisition to acquire and assemble gigapixel images of mouse brains.
    - Developed a data pipeline to automatically align and correct illumination artifacts to create a seamless image mosaic.
