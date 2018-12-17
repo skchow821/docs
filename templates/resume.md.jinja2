@@ -1,10 +1,10 @@
-{{ resume["name"] }}
+{{ resume.name }}
 =======
 ## Experience
 {%- for item in resume.experience %}
 - ** {{ item.company }} ** 
   - {{ item.title }} ({{ item.date.from }} - {{ item.date.to }})
-    {%- for descr in item["description"] recursive %}
+    {%- for descr in item.description recursive %}
 		{%- if descr is string %}
     - {{ descr -}}
 		{% else %}
