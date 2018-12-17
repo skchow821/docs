@@ -4,6 +4,24 @@ import logging
 import yaml
 import os
 import jinja2
+import re
+
+# From here: http://flask.pocoo.org/snippets/55/
+LATEX_SUBS = (
+    (re.compile(r'\\'), r'\\textbackslash'),
+    (re.compile(r'([{}_#%&$])'), r'\\\1'),
+    (re.compile(r'~'), r'\~{}'),
+    (re.compile(r'\^'), r'\^{}'),
+    (re.compile(r'"'), r"''"),
+    (re.compile(r'\.\.\.+'), r'\\ldots'),
+    (re.compile(r'/'), r'\/')
+)
+
+def escape_tex(value):
+    newval = str(value)
+    for pattern, replacement in LATEX_SUBS:
+        newval = pattern.sub(replacement, newval)
+    return newval
 
 def path_normalize(path):
     return os.path.abspath(os.path.expanduser(path))
@@ -16,6 +34,7 @@ def get_templates(template_abs_path):
 def create_environment(template_path, format_ext):
     jinja2_template_loader = jinja2.FileSystemLoader(template_path)
     options = { "loader": jinja2_template_loader }
+    env = None
     if format_ext == ".tex":
         options["block_start_string"] =  '~<'
         options["block_end_string"] = '>~'
@@ -23,7 +42,11 @@ def create_environment(template_path, format_ext):
         options["variable_end_string"] = '>>'
         options["comment_start_string"] = '<#'
         options["comment_end_string"] = '#>'
-    return jinja2.Environment(**options)
+        env = jinja2.Environment(**options)
+        env.filters["escape_tex"] = escape_tex
+    else:
+        env = jinja2.Environment(**options)
+    return env
 
 def render_with_template(resume_data, contact_data, template_path, template_id, output_dir):
     template_id_parts = template_id.split('.')

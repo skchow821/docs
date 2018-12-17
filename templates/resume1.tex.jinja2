@@ -31,7 +31,7 @@
    \begin{itemize}
     ~<- for descr in item.description recursive >~
       ~<- if descr is string >~
-   \item << descr ->>
+   \item << descr | escape_tex ->>
       ~< else >~
    \begin{itemize}
          <<- loop(descr) | indent(4, True) ->>
