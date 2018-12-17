@@ -25,7 +25,7 @@ def create_environment(template_path, format_ext):
         options["comment_end_string"] = '#>'
     return jinja2.Environment(**options)
 
-def render_with_template(yaml_data, template_path, template_id, output_dir):
+def render_with_template(resume_data, contact_data, template_path, template_id, output_dir):
     template_id_parts = template_id.split('.')
     if len(template_id_parts) < 3 or template_id_parts[2].lower() != "jinja2":
         logging.warning("template_id {} is not valid!".format(template_id))
@@ -38,7 +38,7 @@ def render_with_template(yaml_data, template_path, template_id, output_dir):
     logging.debug("Rendering with {} to {}".format(template_id, target_path))
     jinja2_environment = create_environment(template_path, format_ext)
     template = jinja2_environment.get_template(template_id)
-    rendered_output = template.render(resume = yaml_data).encode('utf-8')
+    rendered_output = template.render(resume = resume_data, contact = contact_data).encode('utf-8')
     with open(target_path, 'w') as output:
         output.write(rendered_output)
 
@@ -48,6 +48,7 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description='Takes a resume in yaml format and formats with templates?')
     parser.add_argument('--input', '-i', dest='input_file', required=True, help='input yaml file for resume')
     parser.add_argument('--output', '-o',  dest='output_dir', default="products", help='output directory for formatted resumes')
+    parser.add_argument('--contact_info', '-c', dest='contact_file', default=None, help='Optional contact info to be included for resume')
     parser.add_argument('--template', '-t', dest='template_dir', required=True, help='directory of templates')
     arguments = parser.parse_args()
 
@@ -55,6 +56,8 @@ def parse_arguments():
     arguments.input_file = path_normalize(arguments.input_file)
     arguments.output_dir = path_normalize(arguments.output_dir)
     arguments.template_dir = path_normalize(arguments.template_dir)
+    if arguments.contact_file is not None:
+        arguments.contact_file = path_normalize(arguments.contact_file)
     return arguments
 
 def setup_logging():
@@ -74,9 +77,15 @@ def main():
     logging.debug(template_files)
 
     with open(args.input_file, 'r') as yaml_input:
-        yaml_data = yaml.safe_load(yaml_input)
+        resume_data = yaml.safe_load(yaml_input)
+        contact_data = None
+        if args.contact_file is not None:
+            with open(args.contact_file, 'r') as contact_input:
+                contact_data = yaml.safe_load(contact_input)
+                logging.debug("contact info {} loaded".format(contact_input))
+
         for template_file in template_files:
-            render_with_template(yaml_data, args.template_dir,
+            render_with_template(resume_data, contact_data, args.template_dir,
                 os.path.basename(template_file), args.output_dir)
 
 if __name__ == '__main__':
