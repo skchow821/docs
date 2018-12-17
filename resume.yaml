@@ -83,14 +83,20 @@ technical skills:
 
 education:
     - institution: University of California, San Diego
-      date: 2002 - 2004
+      date:
+        from: 2002
+        to: 2004
       description: MS, Computer Science, Concentration in Computer Graphics And Vision
 
     - institution: University of California, San Diego
-      date: 1997 - 2001
+      date:
+        from: 1997
+        to: 2001
       description: BS, Computer Science
 
     - institution: Tsinghua University
-      date: 2006-2007
+      date:
+        from: 2006
+        to: 2007
       description: Chinese Language Studies
 ...
