@@ -14,7 +14,7 @@ def get_templates(template_abs_path):
     return [template_file for template_file in template_entities if os.path.isfile(template_file) and template_file.endswith("jinja2")]
 
 def render_with_template(yaml_data, template_path, template_id, target, output_dir):
-    format_ext = os.path.splitext(os.path.splitext(template_id)[0])[-1]
+    format_ext = (os.path.splitext(os.path.splitext(template_id)[0])[-1]).lower()
     target_name = target + format_ext
     target_path = os.path.join(output_dir, target_name)
     if not os.path.exists(output_dir):
@@ -22,15 +22,24 @@ def render_with_template(yaml_data, template_path, template_id, target, output_d
         os.makedirs(output_dir)
 
     logging.debug("Rendering with {} to {}".format(template_id, target_path))
+
     jinja2_template_loader = jinja2.FileSystemLoader(template_path)
-    jinja2_environment = jinja2.Environment(loader=jinja2_template_loader)
+    options = { "loader": jinja2_template_loader }
+    if format_ext == ".tex":
+        options["block_start_string"] =  '~<'
+        options["block_end_string"] = '>~'
+        options["variable_start_string"] = '<<'
+        options["variable_end_string"] = '>>'
+        options["comment_start_string"] = '<#'
+        options["comment_end_string"] = '#>'
+    jinja2_environment = jinja2.Environment(**options)
     template = jinja2_environment.get_template(template_id)
     rendered_output = template.render(resume = yaml_data).encode('utf-8')
     with open(target_path, 'w') as output:
         output.write(rendered_output)
 
 # program logic
-# inspired by https://github.com/bamos/cv/blob/master/generate.py
+# From: inspired by https://github.com/bamos/cv/blob/master/generate.py
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Takes a resume in yaml format and formats with templates?')
     parser.add_argument('--input', '-i', dest='input_file', required=True, help='input yaml file for resume')

@@ -1,0 +1,61 @@
+% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+% https://www.rpi.edu/dept/arc/training/latex/resumes/
+
+\documentclass{res} 
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\setlength{\textheight}{9.5in} % increase text height to fit on 1-page 
+
+\begin{document} 
+
+\name{<< resume.name >>\\[12pt]}     % the \\[12pt] adds a blank
+				        % line after name      
+
+%\address{\bf  PRESENT ADDRESS\\193 5th Avenue\\Troy, NY 12180\\(518) 274-1234}
+%\address{\bf PERMANENT ADDRESS \\ 110 Brant Avenue \\  Upper Saddle
+%         River,   NJ 07458 \\  (201) 555-9509}
+                                  
+\begin{resume}
+
+%\section{JOB OBJECTIVE}          
+%    A summer position that will use my accounting and computer
+%    skills.          
+ 
+\section{EXPERIENCE}
+   \vspace{-0.1in}	
+   ~<- for item in resume.experience >~
+   \begin{tabbing}
+   \hspace{2.3in}\= \hspace{2.6in}\= \kill % set up two tab positions
+    {\bf << item.title >>} \> << item.company >>     \> << item.date.from >> - << item.date.to >> \\
+                             \> << item.location >>
+   \end{tabbing}      % suppress blank line after tabbing
+   \begin{itemize}
+    ~<- for descr in item.description recursive >~
+		~<- if descr is string >~
+   \item << descr ->>
+		~< else >~
+   \begin{itemize}
+			<<- loop(descr) | indent(4, True) ->>
+   \end{itemize}
+		~< endif ->~
+   ~< endfor >~ % for descr in item.description recursive
+   \end{itemize}
+   ~< endfor >~ % for item in resume.experience
+
+\section{EDUCATION}          
+	~<- for item in resume.education >~
+	<< item.institution >> \\
+	<< item.description >>, << item.date.to >> 
+	~< endfor >~
+
+\section{TECHNICAL SKILLS}          
+	<< ', '.join(resume["technical skills"]) >>
+ 
+\section{PUBLICATIONS}          
+~<- for publication in resume.publications >~
+	<< publication >>
+~<- endfor >~
+
+\end{resume}
+\end{document}
