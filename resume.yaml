@@ -10,7 +10,7 @@ experience:
    - Led the Activity Team on CoreMotion
    -
     - Mentored and guided developer/scientists, drove schedules, and worked cross functionally to ship the following features
-    - Activity Classification / Step Counter on all variants of the Apple Motion Coprocessor
+    - Activity Classification/Step Counter on all variants of the Apple Motion Coprocessor
     - Find My Car, Do Not Disturb While Driving, Workout Start/Stop Alerts, Sensor data collection for Health User Studies
    - Architected a system that powered the Move/Exercise rings and Workouts experience for the Apple Watch.
    - Made system deterministic for simulation, abstracted unreliable and latent inputs for ease of use, and allowed the team to work in parallel in shipping the feature
