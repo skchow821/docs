@@ -1,15 +1,18 @@
 {{ resume.name }}
 =======
+{%- if contact is not none %}
+*{{ contact.email }}, {{ contact.phone }}, {{ contact.address_1}}, {{ contact.address_2 }}*
+{% endif %}
 ## Experience
 {%- for item in resume.experience %}
 - ** {{ item.company }} ** 
   - {{ item.title }} ({{ item.date.from }} - {{ item.date.to }})
     {%- for descr in item.description recursive %}
-		{%- if descr is string %}
+      {%- if descr is string %}
     - {{ descr -}}
-		{% else %}
-		  {{- loop(descr) | indent(4, True) -}}
-		{% endif -%}
+      {% else %}
+        {{- loop(descr) | indent(4, True) -}}
+      {% endif -%}
     {% endfor %}
 {%- endfor %}
 

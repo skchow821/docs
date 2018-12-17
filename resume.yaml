@@ -50,7 +50,7 @@ experience:
    description:
    - Responsible for the machine vision algorithm development for a cargo dimensioning system using C++.
    - Developed an interactive 3D point cloud viewer to visualize scans and inspect data points generated from a time of flight scanner using Microsoft XNA.
-   - Improved measurement results by developing an algorithm to identify and eliminate false data points created in the shadows of objects.  Shadow detection was implemented by finding sets of points that formed a line collinear with the incident ray from the camera.
+   - Improved measurement results by developing an algorithm to identify and eliminate false data points created in the shadows of objects.  Shadow detection was implemented by finding sets of points that formed a line collinear with the incident ray from the camera.
    - Implemented a motion detection algorithm to trigger automatic system scans using OpenCV and DirectShow using image differences.
    - Designed  an observer pattern based, client-server communication layer using .NET Remoting.
 
@@ -69,7 +69,7 @@ experience:
    date:
      from: 2001
      to: 2006
-   title: Engineer
+   title: Assoc Dev Engineer
    description:
    - Enabled the visualization of neurodegenerative disorders by creating an automated system to acquire and assemble gigapixel images of mouse brains.
    - Utilized the combination of Microsoft Visual C++, MFC and COM to synchronize stepper motor movements with image acquisition.
@@ -88,7 +88,7 @@ technical skills:
   - Linux
 
 education:
-    - institution: University of California, San Diego
+    - institution: University of California, San Diego, NCMIR
       location: San Diego, CA
       date:
         from: 2002
