@@ -7,16 +7,15 @@ experience:
      to: current
    title: CoreMotion Senior Manager
    description:
-   - Led the Activity Team on CoreMotion
+   - Led the CoreMotion Activity team.  Mentored and guided developer/scientists, drove schedules, and shipped the following features
    -
-    - Mentored and guided developer/scientists, drove schedules, and worked cross functionally to ship the following features
     - Activity Classification/Step Counter on all variants of the Apple Motion Coprocessor
     - Find My Car, Do Not Disturb While Driving, Workout Start/Stop Alerts, Sensor data collection for Health User Studies
-   - Architected a system that powered the Move/Exercise rings and Workouts experience for the Apple Watch.
+   - Architected a system that unified the computation of Move, Exercise and Workouts metrics for the Apple Watch.
    - Made system deterministic for simulation, abstracted unreliable and latent inputs for ease of use, and allowed the team to work in parallel in shipping the feature
    - Designed/developed a solution to collect all day sensor data (CMSensorRecorder) in a power efficient manner and was a foundation to building out large scale user studies.
-   - Encouraged a culture to find ways to build ever more robust software.  Participated extensively in book clubs, code reviews, and design reviews.
-   - Cultivated lasting internal and cross functional partnerships by being transparent and respectful in the pursuit of mutually beneficial goals.
+   - Encouraged a culture of building better software.  Participated in book clubs, code reviews, and design reviews.
+   - Cultivated cross functional partnerships through understanding and transparency.
 
  - company: Pacific Biosciences
    location: Menlo Park, CA
@@ -65,7 +64,7 @@ experience:
    - Jointly developed overseas online marketing programs and bridged language communications.
 
  - company: University of California San Diego
-   location: San Diego, CA
+   location: NCMIR - San Diego, CA
    date:
      from: 2001
      to: 2006
@@ -88,7 +87,7 @@ technical skills:
   - Linux
 
 education:
-    - institution: University of California, San Diego, NCMIR
+    - institution: University of California, San Diego
       location: San Diego, CA
       date:
         from: 2002
