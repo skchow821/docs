@@ -21,14 +21,11 @@
 \begin{resume}
 
 \section{EXPERIENCE}
-   \vspace{-0.1in}
    ~<- for item in resume.experience >~
-   \begin{tabbing}
-   \hspace{2.3in}\= \hspace{2.6in}\= \kill % set up two tab positions
-    {\bf << item.title >>} \> << item.company >>     \> << item.date.from >> - << item.date.to >> \\
-                             \> << item.location >>
-   \end{tabbing}      % suppress blank line after tabbing
-   \begin{itemize}
+   {\sl << item.title >>} \hfill << item.date.from >> - << item.date.to >> \\
+   << item.company >>,
+   << item.location >>
+   \begin{itemize} \itemsep -2pt % reduce space between items
     ~<- for descr in item.description recursive >~
       ~<- if descr is string >~
    \item << descr | escape_tex ->>
@@ -43,8 +40,8 @@
 
 \section{EDUCATION}
    ~<- for item in resume.education >~
-   << item.institution >> \\
-   << item.description >>, << item.date.to >> 
+	{\sl << item.description >>,} << item.date.to >> \\
+   << item.institution >> 
    ~< endfor >~
 
 \section{Technical}

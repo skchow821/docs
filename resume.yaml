@@ -4,17 +4,14 @@ experience:
    location: Cupertino, CA
    date:
      from: 2012
-     to: current
+     to: Current
    title: CoreMotion Senior Manager
    description:
-   - Led a multidisciplinary team and worked cross functionally to ship the features (iOS 6.0+, watchOS 1.0+) including the following
-   -
-    - Activity classification/Pedometer on all variants of the Apple Motion Coprocessor
-    - Vehicular detection for Find My Car, Do Not Disturb While Driving
-    - Workout detection for Automatic Workout Start/Stop Alerts
-   - Architected a system that unified the computation of Move, Exercise and Workouts metrics for the Apple Watch. Designed system to be deterministic for simulation, abstracted lossy and latent inputs for ease of use, and allowed the team to work in parallel in shipping the features.
-   - Designed/developed a solution for all day sensor data recording (CMSensorRecorder).  This was a foundation to building out large scale user studies.
-   - Encouraged a culture of building better software.  Participated in book clubs, code reviews, and design reviews.
+   - Improved process for motion algorithm development by adapting non deterministic Objective-C++ code to run deterministically on OSX to enable offline and repeatable simulations. Significantly reduced costs for development, debugging, and validation and increased confidence in shipped software by simulating against large volumes of data.  Utilized the new processes in developing the always on activity classification and step counting algorithms for the M7 motion coprocessor.
+   - Architected the calorimetry engine using modern C++ to power the rings and the workout experience for the Apple Watch. Partitioned the design based on user activity and created interfaces to coordinate control and abstract access to sensor inputs.  Incorporated offline simulations into design for different subteams specialized in calorimetry modeling to minimize algorithm iteration times.
+   - Increased time window for sensor recording from 6 hours to the entire day by utilizing the motion coprocessor's interface with DRAM to buffer sensor data without waking the application processor.  All day recording capabilities resulted in more complete diagnostics for internal bug reporting and ultimately to remote data collection capabilities (used to collect data for Fall detection).
+   - Led the motion activity classification team in improving precision/recall for vehicular classification for use in Do Not Disturb while Driving. Coordinated with other wireless teams to create novel notions of vehicular speed to complement accelerometer based classification. Reimplemented the legacy heuristics as a state machine for team to more easily add transitions to integrate new inputs.  Leveraged improvements to simulation and all day sensor recording to further tune activity classification.
+   - Applied team's activity classification and data collection expertise to fitness and delivered Workout Alerts.  Anticipated need for design data and secured senior leadership approval to collect sensor data from users during user initiated workouts.  Engaged Health Data Sciences and Privacy teams for requirements to implement a system to collect and upload data remotely.  Led team in designing a multi-tiered detector + classifier solution to balance tradeoffs between lower powered and always on detection, with higher power and more discriminative sensors for workout classification.
 
  - company: Pacific Biosciences
    location: Menlo Park, CA
@@ -23,60 +20,43 @@ experience:
     to: 2012
    title: Software Engineer
    description:
-   - Responsible for the robot and machine vision software for a genetic sequencing instrument using with C#, python, and C++
-   - Worked with software, systems, field service, and factory teams to practively identify and address instrument software reliability issues.
-   - Eliminated a major source of chip pick up failures by identifying and fixing a critical machine vision transformation that incorrectly calculated the pose of the stage from which our robot was attempting to pick up a chip.
+   - Increased overall system stability and sequencing yield by improving robustness of robotics and machine vision subsystems.
 
  - company: Direct Electron
    location: San Diego, CA
    date:
      from: 2010
      to: 2010
-   title: Independent
+   title: Consultant
    description:
-   - Developed the Direct Electron microscope client in C++, and Visual Studio.  Used Boost ASIO for TCP/IP communication to the server and protobufs for data serialization.  Ported client to Linix platforms using GNU Autotools.
+   - Developed a cross platform, remote microscopy client in C++ for Windows and Linux.
 
  - company: FreightScan Cargo
    location: San Diego, CA
    date:
-     from: 2007
+     from: 2009
      to: 2009
-   title: Senior Software Engineer
+   title: Software Engineer
    description:
-   - Designed an observer pattern based, client-server communication layer using .NET Remoting.
-   - Designed machine vision algorithms for a cargo dimensioning system using C++.  Improved measurement results by developing an algorithm to identify and eliminate false data points created in the shadows of objects.  Shadow detection was implemented by finding sets of points that formed a line collinear with the incident ray from the camera.
-   - Developed an interactive 3D point cloud viewer to visualize scans and inspect data points generated from a time of flight scanner using Microsoft XNA.
+   - Developed instrumentation and machine vision software for a package dimensioning system using C#, .Net Remoting, and C++.
 
  - company: Alibaba
-   location: Hanzhou, China
+   location: Hangzhou, China
    date:
      from: 2007
      to: 2009
    title: Product Developer
    description:
-   - Coordinated regional US and Hong Kong marketing operations from China headquarters.
-   - Jointly developed overseas online marketing programs and bridged language communications.
+   - Coordinated online marketing efforts between the China and International marketing teams.  
 
- - company: University of California San Diego
-   location: NCMIR - San Diego, CA
+ - company: National Center for Microscopy and Imaging Research, UCSD
+   location: San Diego, CA
    date:
      from: 2001
      to: 2006
-   title: Assoc Dev Engineer
+   title: Associate Development Engineer
    description:
-   - Enabled the visualization of neurodegenerative disorders by integrating a motorized microscope platform and image acquisition to acquire and assemble gigapixel images of mouse brains.
-   - Developed a data pipeline to automatically align and correct illumination artifacts to create a seamless image mosaic.
-
-publications:
-    - Journal of Microscopy, Automated Microscopy System for Mosaic Acquisition and Processing
-
-technical skills:
-  - C++
-  - Objective C
-  - Python
-  - iOS
-  - Git
-  - Linux
+   - Integrated an automated microscopy platform with image stitching to create seamless, high resolution imagery.
 
 education:
     - institution: University of California, San Diego
@@ -92,11 +72,4 @@ education:
         from: 1997
         to: 2001
       description: BS, Computer Science
-
-    - institution: Tsinghua University
-      location: Beijing, China
-      date:
-        from: 2006
-        to: 2007
-      description: Chinese Language Studies
 ...
