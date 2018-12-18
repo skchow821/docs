@@ -7,15 +7,14 @@ experience:
      to: current
    title: CoreMotion Senior Manager
    description:
-   - Led the CoreMotion Activity team.  Mentored and guided developer/scientists, drove schedules, and shipped the following features
+   - Led a multidisciplinary team and worked cross functionally to ship the features (iOS 6.0+, watchOS 1.0+) including the following
    -
-    - Activity Classification/Step Counter on all variants of the Apple Motion Coprocessor
-    - Find My Car, Do Not Disturb While Driving, Workout Start/Stop Alerts, Sensor data collection for Health User Studies
-   - Architected a system that unified the computation of Move, Exercise and Workouts metrics for the Apple Watch.
-   - Made system deterministic for simulation, abstracted unreliable and latent inputs for ease of use, and allowed the team to work in parallel in shipping the feature
-   - Designed/developed a solution to collect all day sensor data (CMSensorRecorder) in a power efficient manner and was a foundation to building out large scale user studies.
+    - Activity classification/Pedometer on all variants of the Apple Motion Coprocessor
+    - Vehicular detection for Find My Car, Do Not Disturb While Driving
+    - Workout detection for Automatic Workout Start/Stop Alerts
+   - Architected a system that unified the computation of Move, Exercise and Workouts metrics for the Apple Watch. Designed system to be deterministic for simulation, abstracted lossy and latent inputs for ease of use, and allowed the team to work in parallel in shipping the features.
+   - Designed/developed a solution for all day sensor data recording (CMSensorRecorder).  This was a foundation to building out large scale user studies.
    - Encouraged a culture of building better software.  Participated in book clubs, code reviews, and design reviews.
-   - Cultivated cross functional partnerships through understanding and transparency.
 
  - company: Pacific Biosciences
    location: Menlo Park, CA
@@ -24,11 +23,9 @@ experience:
     to: 2012
    title: Software Engineer
    description:
-   - Responsible for the robot and machine vision software for a genetic sequencing instrument.
-   - Developed application software using C# and NUnit, using both Visual Studio and Linux.  Debugged embedded Linux applications written in C++.  Developed manufacturing, field service, and testing scripts using Python.
+   - Responsible for the robot and machine vision software for a genetic sequencing instrument using with C#, python, and C++
+   - Worked with software, systems, field service, and factory teams to practively identify and address instrument software reliability issues.
    - Eliminated a major source of chip pick up failures by identifying and fixing a critical machine vision transformation that incorrectly calculated the pose of the stage from which our robot was attempting to pick up a chip.
-   - Improved robustness to imaging variations for a fiducial detection and positioning algorithm by applying additional constraints to minimally select and enhance edges using morphology together with sharpening filters.
-   - Simplified and refactored the interlock publisher-subscriber system for correct behavior.  Improved software response times by reducing unnecessary synchroniztion between status updates and the status update responses.
 
  - company: Direct Electron
    location: San Diego, CA
@@ -37,8 +34,7 @@ experience:
      to: 2010
    title: Independent
    description:
-   - Developed the Direct Electron microscope client in C++, and Visual Studio.  Used Boost ASIO for TCP/IP communication to the server and Google Protocol Buffers for data serialization.  Ported client to Linix platforms using GNU Autotools.
-   - Developed the LiveFFT plugin for ImageJ in Java to dynamically update an image's FFT transform as it is updated (during image acquisition).
+   - Developed the Direct Electron microscope client in C++, and Visual Studio.  Used Boost ASIO for TCP/IP communication to the server and protobufs for data serialization.  Ported client to Linix platforms using GNU Autotools.
 
  - company: FreightScan Cargo
    location: San Diego, CA
@@ -47,11 +43,9 @@ experience:
      to: 2009
    title: Senior Software Engineer
    description:
-   - Responsible for the machine vision algorithm development for a cargo dimensioning system using C++.
+   - Designed an observer pattern based, client-server communication layer using .NET Remoting.
+   - Designed machine vision algorithms for a cargo dimensioning system using C++.  Improved measurement results by developing an algorithm to identify and eliminate false data points created in the shadows of objects.  Shadow detection was implemented by finding sets of points that formed a line collinear with the incident ray from the camera.
    - Developed an interactive 3D point cloud viewer to visualize scans and inspect data points generated from a time of flight scanner using Microsoft XNA.
-   - Improved measurement results by developing an algorithm to identify and eliminate false data points created in the shadows of objects.  Shadow detection was implemented by finding sets of points that formed a line collinear with the incident ray from the camera.
-   - Implemented a motion detection algorithm to trigger automatic system scans using OpenCV and DirectShow using image differences.
-   - Designed  an observer pattern based, client-server communication layer using .NET Remoting.
 
  - company: Alibaba
    location: Hanzhou, China
@@ -70,13 +64,11 @@ experience:
      to: 2006
    title: Assoc Dev Engineer
    description:
-   - Enabled the visualization of neurodegenerative disorders by creating an automated system to acquire and assemble gigapixel images of mouse brains.
-   - Utilized the combination of Microsoft Visual C++, MFC and COM to synchronize stepper motor movements with image acquisition.
-   - Engineered a non-uniform illumination correction and image alignment solution in a memory efficient manner with Eclipse and Java Advanced Imaging libraries.
-   - Collaborated with Olympus engineers to develop commercial automated mosaic systems.
+   - Enabled the visualization of neurodegenerative disorders by integrating a motorized microscope platform and image acquisition to acquire and assemble gigapixel images of mouse brains.
+   - Developed a data pipeline to automatically align and correct illumination artifacts to create a seamless image mosaic.
 
 publications:
-  - Journal of Microscopy, Automated Microscopy System for Mosaic Acquisition and Processing
+    - Journal of Microscopy, Automated Microscopy System for Mosaic Acquisition and Processing
 
 technical skills:
   - C++
