@@ -8,10 +8,10 @@
 - ** {{ item.company }} ** 
   - {{ item.title }} ({{ item.date.from }} - {{ item.date.to }})
     {%- for descr in item.description recursive %}
-      {%- if descr is string %}
-    - {{ descr -}}
+      {%- if descr.detail is string %}
+    - {{ '*%s*' % descr.title if descr.title is defined }} {{ descr.detail -}}
       {% else %}
-        {{- loop(descr) | indent(4, True) -}}
+        {{- loop(descr.detail) | indent(4, True) -}}
       {% endif -%}
     {% endfor %}
 {%- endfor %}

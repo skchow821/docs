@@ -7,11 +7,20 @@ experience:
      to: Current
    title: CoreMotion Senior Manager
    description:
-   - Improved process for motion algorithm development by adapting non deterministic Objective-C++ code to run deterministically on OSX to enable offline and repeatable simulations. Significantly reduced costs for development, debugging, and validation and increased confidence in shipped software by simulating against large volumes of data.  Utilized the new processes in developing the always on activity classification and step counting algorithms for the M7 motion coprocessor.
-   - Architected the calorimetry engine using modern C++ to power the rings and the workout experience for the Apple Watch. Partitioned the design based on user activity and created interfaces to coordinate control and abstract access to sensor inputs.  Incorporated offline simulations into design for different subteams specialized in calorimetry modeling to minimize algorithm iteration times.
-   - Increased time window for sensor recording from 6 hours to the entire day by utilizing the motion coprocessor's interface with DRAM to buffer sensor data without waking the application processor.  All day recording capabilities resulted in more complete diagnostics for internal bug reporting and ultimately to remote data collection capabilities (used to collect data for Fall detection).
-   - Led the motion activity classification team in improving precision/recall for vehicular classification for use in Do Not Disturb while Driving. Coordinated with other wireless teams to create novel notions of vehicular speed to complement accelerometer based classification. Reimplemented the legacy heuristics as a state machine for team to more easily add transitions to integrate new inputs.  Leveraged improvements to simulation and all day sensor recording to further tune activity classification.
-   - Applied team's activity classification and data collection expertise to fitness and delivered Workout Alerts.  Anticipated need for design data and secured senior leadership approval to collect sensor data from users during user initiated workouts.  Engaged Health Data Sciences and Privacy teams for requirements to implement a system to collect and upload data remotely.  Led team in designing a multi-tiered detector + classifier solution to balance tradeoffs between lower powered and always on detection, with higher power and more discriminative sensors for workout classification.
+   - title: Motion Algorithm Development Platform
+     detail: Adapted non deterministic Objective-C++ code to run deterministically on OSX to enable offline and repeatable simulations. Significantly reduced costs for development, debugging, and validation and increased confidence in shipped software by simulating against large volumes of data.  Utilized the new processes in developing motion algorithms for the M7 motion coprocessor.
+
+   - title: Calorimetry Engine for Apple Watch
+     detail: Architected using modern C++ and partitioned the design based on user activity and created interfaces to coordinate control and abstract access to sensor inputs.  Incorporated offline simulations into design for different subteams specialized in calorimetry modeling to minimize algorithm iteration times.
+
+   - title: All Day Sensor Recording
+     detail: Increased time window for sensor recording from 6 hours to the entire day by utilizing the motion coprocessor's interface with DRAM to buffer sensor data without waking the application processor.  Enabled more complete diagnostics for internal bug reporting and ultimately to remote data collection capabilities (used to collect data for Fall detection).
+
+   - title: Do Not Disturb While Driving
+     detail: Led the motion activity classification team in improving precision/recall for vehicular classification. Coordinated with other wireless teams to create novel notions of vehicular speed to complement accelerometer based classification. Reimplemented the legacy heuristics as a state machine for team to more easily add transitions to integrate new inputs.  Leveraged improvements to simulation and all day sensor recording to further tune activity classification.
+
+   - title: Workout Alerts
+     detail: Extended team's data collection and classification expertise into fitness.  Anticipated need for design data and secured senior leadership approval to collect sensor data from users during user initiated workouts.  Engaged Health Data Sciences and Privacy teams for requirements to implement a system to collect and upload data remotely.  Led team in designing a multi-tiered detector + classifier solution to balance tradeoffs between lower powered and always on detection, with higher power and more discriminative sensors for workout classification.
 
  - company: Pacific Biosciences
    location: Menlo Park, CA
@@ -20,7 +29,7 @@ experience:
     to: 2012
    title: Software Engineer
    description:
-   - Increased overall system stability and sequencing yield by improving robustness of robotics and machine vision subsystems.
+   - detail: Increased overall system stability and sequencing yield by improving robustness of robotics and machine vision subsystems.
 
  - company: Direct Electron
    location: San Diego, CA
@@ -29,7 +38,7 @@ experience:
      to: 2010
    title: Consultant
    description:
-   - Developed a cross platform, remote microscopy client in C++ for Windows and Linux.
+   - detail: Developed a cross platform, remote microscopy client in C++ for Windows and Linux.
 
  - company: FreightScan Cargo
    location: San Diego, CA
@@ -38,7 +47,7 @@ experience:
      to: 2009
    title: Software Engineer
    description:
-   - Developed instrumentation and machine vision software for a package dimensioning system using C#, .Net Remoting, and C++.
+   - detail: Developed instrumentation and machine vision software for a package dimensioning system using C#, .Net Remoting, and C++.
 
  - company: Alibaba
    location: Hangzhou, China
@@ -47,7 +56,7 @@ experience:
      to: 2009
    title: Product Developer
    description:
-   - Coordinated online marketing efforts between the China and International marketing teams.  
+   - detail: Coordinated online marketing efforts between the China and International marketing teams.  
 
  - company: National Center for Microscopy and Imaging Research, UCSD
    location: San Diego, CA
@@ -56,7 +65,7 @@ experience:
      to: 2006
    title: Associate Development Engineer
    description:
-   - Integrated an automated microscopy platform with image stitching to create seamless, high resolution imagery.
+   - detail: Integrated an automated microscopy platform with image stitching to create seamless, high resolution imagery.
 
 education:
     - institution: University of California, San Diego
