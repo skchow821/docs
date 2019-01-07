@@ -11,7 +11,7 @@ experience:
      detail: Adapted non deterministic Objective-C++ code to run deterministically on OSX to enable offline and repeatable simulations. Significantly reduced costs for development, debugging, and validation and increased confidence in shipped software by simulating against large volumes of data.  Utilized the new processes in developing motion algorithms for the M7 motion coprocessor.
 
    - title: Calorimetry Engine for Apple Watch
-     detail: Architected using modern C++ and partitioned the design based on user activity and created interfaces to coordinate control and abstract access to sensor inputs.  Incorporated offline simulations into design for different subteams specialized in calorimetry modeling to minimize algorithm iteration times.
+     detail: Architected using modern C++ and partitioned the design based on user activity.  Created interfaces to coordinate control and abstract access to sensor inputs.  Incorporated offline simulations into design to simplify development for subteams specialized in calorimetry modeling.
 
    - title: All Day Sensor Recording
      detail: Increased time window for sensor recording from 6 hours to the entire day by utilizing the motion coprocessor's interface with DRAM to buffer sensor data without waking the application processor.  Enabled more complete diagnostics for internal bug reporting and ultimately to remote data collection capabilities (used to collect data for Fall detection).
@@ -67,6 +67,17 @@ experience:
    description:
    - detail: Integrated an automated microscopy platform with image stitching to create seamless, high resolution imagery.
 
+publications:
+    - Chow SK, Hakozaki H, Price DL, MacLean NA, Deerinck TJ, Bouwer JC, Martone ME, Peltier ST, Ellisman MH. (2006), Automated Microscopy System for Mosaic Acquisition and Processing. J Microscopy. 222(Pt 2):76-84
+
+technical skills:
+  - C++
+  - Objective C
+  - Python
+  - iOS
+  - Git
+  - Linux
+
 education:
     - institution: University of California, San Diego
       location: San Diego, CA
@@ -74,6 +85,7 @@ education:
         from: 2002
         to: 2004
       description: MS, Computer Science, Concentration in Computer Graphics And Vision
+      gpa: Major 3.7
 
     - institution: University of California, San Diego
       location: San Diego, CA
@@ -81,4 +93,5 @@ education:
         from: 1997
         to: 2001
       description: BS, Computer Science
+      gpa: 3.8
 ...
