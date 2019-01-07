@@ -27,11 +27,11 @@
    << item.location >>
    \begin{itemize} \itemsep -2pt % reduce space between items
     ~<- for descr in item.description recursive >~
-      ~<- if descr is string >~
-   \item << descr | escape_tex ->>
+      ~<- if descr.detail is string >~
+   \item << '\\textbf{%s}:' % descr.title if descr.title is defined >> << descr.detail | escape_tex ->>
       ~< else >~
    \begin{itemize}
-         <<- loop(descr) | indent(4, True) ->>
+         <<- loop(descr.detail) | indent(4, True) ->>
    \end{itemize}
       ~< endif ->~
    ~< endfor >~ % for descr in item.description recursive
@@ -44,7 +44,7 @@
    << item.institution >> 
    ~< endfor >~
 
-\section{Technical}
+\section{TECHNICAL SKILLS}
    << ', '.join(resume["technical skills"]) >>
 
 \section{PUBLICATIONS}
