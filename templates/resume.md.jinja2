@@ -2,7 +2,10 @@
 =======
 {%- if contact is not none %}
 *{{ contact.email }}, {{ contact.phone }}, {{ contact.address_1}}, {{ contact.address_2 }}*
-{% endif %}
+{% endif -%}
+[linkedin]({{ resume.linkedin }})
+[github]({{ resume.github }})
+
 ## Experience
 {%- for item in resume.experience %}
 - ** {{ item.company }} ** 
