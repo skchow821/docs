@@ -13,7 +13,7 @@
     {%- for descr in item.description recursive %}
       {%- if descr.detail is string %}
     - {{ '*%s*' % descr.title if descr.title is defined }} {{ descr.detail -}}
-      {% else %}
+      {% elif 'detail' in descr %}
         {{- loop(descr.detail) | indent(4, True) -}}
       {% endif -%}
     {% endfor %}

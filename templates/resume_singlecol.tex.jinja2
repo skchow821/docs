@@ -86,7 +86,7 @@
 	~<- for descr in item.description recursive >~
 	  ~<- if descr.detail is string >~
         \resumeItem{<< '\\textbf{%s}:' % descr.title if descr.title is defined >> << descr.detail | escape_tex ->>}
-      ~< else >~
+      ~< elif 'detail' in descr >~
 	    \resumeItemListStart
           <<- loop(descr.detail) | indent(4, True) ->>
         \resumeItemListEnd
