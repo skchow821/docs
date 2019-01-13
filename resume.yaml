@@ -81,7 +81,7 @@ experience:
    title: Associate Development Engineer
    description:
    - detail: Integrated an automated microscopy platform with image stitching to create seamless, high resolution imagery.
-   - detail: Published “Automated Microscopy System for Mosaic Acquisition and Processing”, Journal of Microscopy, Vol 222 Issue 2 Pg 76 - May 2006.
+   - detail: Published "Automated Microscopy System for Mosaic Acquisition and Processing", Journal of Microscopy, Vol 222 Issue 2 Pg 76 - May 2006.
    - detail_1: Created an automated system to acquire thousands of individual images to stitch into one single image bringing to fruition gigapixel mosaic images of mouse brains.
    - detail_1: Enabled the scientific understanding of genetic disorders expressed in mouse brains at the micro and macro level.
    - detail_1: Utilized the combination of Microsoft Visual C++, MFC and COM to synchronize stepper motor movements with image acquisition.
