@@ -5,12 +5,12 @@ experience:
    date:
      from: 2012
      to: Current
-   title: CoreMotion Senior Manager
+   title: Senior Software Engineering Manager - CoreMotion
    description:
    - title: Motion Algorithm Development Platform
      detail: Adapted non deterministic Objective-C++ code to run deterministically on OSX to enable offline and repeatable simulations. Significantly reduced costs for development, debugging, and validation and increased confidence in shipped software by simulating against large volumes of data.  Utilized the new processes in developing motion algorithms for the M7 motion coprocessor.
 
-   - title: Calorimetry Engine for Apple Watch
+   - title: Calorie Engine for Apple Watch
      detail: Architected using modern C++ and partitioned the design based on user activity.  Created interfaces to coordinate control and abstract access to sensor inputs.  Incorporated offline simulations into design to simplify development for subteams specialized in calorimetry modeling.
 
    - title: All Day Sensor Recording
@@ -30,6 +30,10 @@ experience:
    title: Software Engineer
    description:
    - detail: Increased overall system stability and sequencing yield by improving robustness of robotics and machine vision subsystems.
+   - detail_1: Responsible for robot control and workflow software for a genome sequencing instrument.
+   - detail_1: Developed, characterized, and improved machine vision algorithms to coordinate robot motions to objects on a work deck using Halcon.
+   - detail_1: Designed and developed a new interface to simplify common robot to work deck motions.
+   - detail_1: Worked closely with manufacturing and systems verification groups to troubleshoot and increase the reliability of the instrument
 
  - company: Direct Electron
    location: San Diego, CA
@@ -38,7 +42,10 @@ experience:
      to: 2010
    title: Consultant
    description:
-   - detail: Developed a cross platform, remote microscopy client in C++ for Windows and Linux.
+   - detail: Developed a remote microscopy client/server interface in C++ for Windows and Linux.
+   - detail_1: Developed a C++ library to control a Direct Electron camera over TCP/IP through Micro Manager
+   - detail_1: Developed a visualization tool in Java to interactively display the FFT power spectrum for ImageJ.
+   - detail_1:  Made network communications extensible to future camera development by implementing enumeration capabilities and self describing packets using C++ and Google Protocol Buffers.
 
  - company: FreightScan Cargo
    location: San Diego, CA
@@ -48,6 +55,14 @@ experience:
    title: Software Engineer
    description:
    - detail: Developed instrumentation and machine vision software for a package dimensioning system using C#, .Net Remoting, and C++.
+   - detail_1: Participated in the development of a next generation cargo dimensioning system.
+   - detail_1: Developed automated testing of dimensioning algorithms to characterize and improve accuracy.
+   - detail_1: Improved existing dimensioning algorithm and reduced processing time.
+   - detail_1: Used Microsoft XNA to develop an interactive 3D visualization tool.
+   - detail_1: Developed the server-client networking layer using .NET Remoting.
+   - detail_1: Implemented motion triggered cargo scans using OpenCV and DirectShow.
+   - detail_1: Prototyped noise reduction algorithms using MATLAB and implemented it using OpenCV.
+   - detail_1: Prototyped 3D alignment routines for multi-camera systems using MATLAB.
 
  - company: Alibaba
    location: Hangzhou, China
@@ -66,6 +81,33 @@ experience:
    title: Associate Development Engineer
    description:
    - detail: Integrated an automated microscopy platform with image stitching to create seamless, high resolution imagery.
+   - detail_1: Created an automated system to acquire thousands of individual images to stitch into one single image bringing to fruition gigapixel mosaic images of mouse brains.
+   - detail_1: Enabled the scientific understanding of genetic disorders expressed in mouse brains at the micro and macro level.
+   - detail_1: Utilized the combination of Microsoft Visual C++, MFC and COM to synchronize stepper motor movements with image acquisition.
+   - detail_1: Engineered a non-uniform illumination correction and image alignment solution in a memory efficient manner via Eclipse and Java Advanced Imaging libraries.
+   - detail_1: Collaborated with Olympus engineers to develop commercial automated mosaic systems.
+   - detail_1: Published “Automated Microscopy System for Mosaic Acquisition and Processing”, Journal of Microscopy, Vol 222 Issue 2 Pg 76 - May 2006.
+
+# - company: AttenuTech
+#   location:
+#   date:
+#     from: 2010
+#     to: 2010
+#   title: Consultant
+#   description:
+#   - detail: Improved overall conversion rates by 12% for radiation products by improving the integration of the shopping cart with the rest of website.
+#   - detail: Developed an OSCommerce plugin to add items to cart using an Ajax interface using PHP and JQuery.
+#
+# - company: Orpix
+#   location:
+#   date:
+#     from: 2010
+#     to: 2010
+#   title: Consultant
+#   description:
+#   - detail: Implemented a rectangle bounding box algorithm for outlining photographs in a video stream in C++ and OpenCV.
+#   - detail: Developed a DirectShow library to interface with video cameras.
+
 
 publications:
     - Chow SK, Hakozaki H, Price DL, MacLean NA, Deerinck TJ, Bouwer JC, Martone ME, Peltier ST, Ellisman MH. (2006), Automated Microscopy System for Mosaic Acquisition and Processing. J Microscopy. 222(Pt 2):76-84
